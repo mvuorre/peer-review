@@ -1,12 +1,25 @@
 name: "peer-review"
 title: "Peer Review"
 description: |
-  Peer Review
+  My open peer reviews
 output_dir: "docs"
+base_url: https://mvuorre.github.io/peer-review
+repository_url: https://github.com/mvuorre/peer-review
+creative_commons: CC BY
+twitter:
+  site: "@vuorre"
+  creator: "@vuorre"
+collections:
+  posts:
+    disqus: peer-review
+    custom: _custom.html
 navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
-output: distill::distill_article
+    - icon: fa fa-rss
+      href: index.xml
+output: 
+  distill::distill_article:
+    toc: yes
+    toc_level: 1
